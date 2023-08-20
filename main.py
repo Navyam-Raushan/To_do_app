@@ -5,7 +5,7 @@ import time
 
 # To show current time and date. 
 now = time.strftime("%b %d %H:%M:%S")
-print("Adding a time label feature")
+
 print("Welcome, Its", now)
 while True:
 
