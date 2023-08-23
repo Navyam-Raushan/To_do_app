@@ -1,7 +1,4 @@
-webbrowser
-shutil
-csv
-glob
-json
-math
-random
+capture itrun it
+fix the error
+play chess
+clean the code
