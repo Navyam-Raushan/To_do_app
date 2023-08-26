@@ -3,8 +3,11 @@ from PIL import Image
 
 st.title("Grayscale image maker.")
 
-# Started the camera
-img_input = st.camera_input("Camera")
+# Need more control over the camera as it open directly
+
+with st.expander("Start camera"):
+    # Started the camera
+    img_input = st.camera_input("Camera")
 
 # starting conversion to grayscale
 # if img is not taken then img_input is NONE
