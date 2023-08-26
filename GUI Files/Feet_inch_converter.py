@@ -18,18 +18,22 @@ window = sg.Window("Convertor", layout=[[label1, text_box1],
                                         [label2, text_box2],
                                        [convert_button, output, close]])
 while True:
-    event, values = window.read()
-    print(event)
-    print(values)
-    feet = int(values["f"])
-    inches = int(values["i"])
+    try:
+        event, values = window.read()
+        print(event)
+        print(values)
+        feet = int(values["f"])
+        inches = int(values["i"])
 
-    if event == "convert":
-        res = func.feet_inch(feet, inches)
-        window["output"].update(value=f"{res} m")
-        print(res)
-    if event == "close" or sg.WIN_CLOSED:
-        break
+        if event == "convert":
+            res = func.feet_inch(feet, inches)
+            window["output"].update(value=f"{res} m")
+            print(res)
+        if event == "close" or sg.WIN_CLOSED:
+            break
+    except ValueError:
+        sg.theme("Black")
+        sg.popup("Please provide two numbers", title="Warning!")
 
 
 window.close()
