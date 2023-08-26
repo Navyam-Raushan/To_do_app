@@ -13,10 +13,11 @@ convert_button = sg.Button("Convert", key="convert")
 output = sg.Text(key="output", text_color="Green")
 
 close = sg.Button("Close", key="close")
+col1 = sg.Column([[label1], [label2]])
+col2 = sg.Column([[text_box1], [text_box2]])
 
-window = sg.Window("Convertor", layout=[[label1, text_box1],
-                                        [label2, text_box2],
-                                       [convert_button, output, close]])
+window = sg.Window("Convertor", layout=[[col1, col2],
+                                        [convert_button, output, close]])
 while True:
     try:
         event, values = window.read()

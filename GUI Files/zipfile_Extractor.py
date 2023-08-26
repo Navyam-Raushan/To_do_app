@@ -15,11 +15,16 @@ extract = sg.Button("Extract")
 output = sg.Text(key="output", text_color="green")
 close = sg.Button("Close", key="close")
 
+col1 = sg.Column([[label1], [label2]])
+col2 = sg.Column([[filepath1], [filepath2]])
+col3 = sg.Column([[button1], [button2]])
+
+
 window = sg.Window("Zipfile Extractor",
-                   layout=[[label1, filepath1, button1],
-                           [label2, filepath2, button2],
+                   layout=[[col1, col2, col3],
                            [extract, output, close]],
                    font=("Helvetica", 16))
+
 
 while True:
     event, values = window.read()
