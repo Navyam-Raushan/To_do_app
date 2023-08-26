@@ -13,6 +13,16 @@ def make_zip(filepaths, dest_folder):
             file.write(filepath, arcname=filepath.name)
 
 
+"""Because we are extracting the file so we
+    open it in the read mode.
+    we must provide absolute path when we call function."""
+
+
+def extract_zip(zippath, dest_dir):
+    with zipfile.ZipFile(zippath, "r") as file:
+        file.extractall(dest_dir)
+
+
 def feet_inch(feet, inches):
     return (feet * 0.3048) + (inches * 0.0254)
 
