@@ -1,7 +1,14 @@
 import functions
 import time
 import PySimpleGUI as sg
+import os
 
+"""This will help to create todoo file if it
+    does not exist"""
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as file:
+        pass
 
 sg.theme("DarkPurple4")
 my_clock = sg.Text(key="clock")
