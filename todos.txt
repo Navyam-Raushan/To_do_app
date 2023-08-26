@@ -1,7 +1,6 @@
-fix the error
 make maggi
-completed day 18
 now final touch
 added a new function
-help poors
-clean bag
+fix the error
+Completed web app
+
