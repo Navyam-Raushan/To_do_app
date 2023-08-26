@@ -1,4 +1,2 @@
-capture itrun it
 fix the error
-play chess
-clean the code
+complete the food
