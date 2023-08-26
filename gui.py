@@ -6,8 +6,8 @@ import os
 """This will help to create todoo file if it
     does not exist"""
 
-if not os.path.exists("todos.txt"):
-    with open("todos.txt", "w") as file:
+if not os.path.exists("../Web_app/todos.txt"):
+    with open("../Web_app/todos.txt", "w") as file:
         pass
 
 sg.theme("DarkPurple4")
