@@ -3,6 +3,10 @@ from PIL import Image
 
 st.title("Grayscale image maker.")
 
+# adding a new feature of browsing the file
+
+uploaded_image = st.file_uploader("Upload Your Image")
+
 # Need more control over the camera as it open directly
 
 with st.expander("Start camera"):
@@ -19,6 +23,10 @@ if img_input:
     gray_img = img.convert("L")
 
     # show the image
+    st.image(gray_img)
+if uploaded_image:
+    img = Image.open(uploaded_image)
+    gray_img = img.convert("L")
     st.image(gray_img)
 
 
