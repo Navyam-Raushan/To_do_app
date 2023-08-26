@@ -1,2 +1,4 @@
 fix the error
-complete the food
+make maggi
+completed day 18
+now final touch
